@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', init);
 
 function init() {
     // レンダラーを作成
-    const renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer({antialias:true});
     // ウィンドウサイズ設定
     width = window.innerWidth / 1.6;
     height = window.innerHeight / 1.6;
@@ -18,9 +18,6 @@ function init() {
     // シーンを作成
     const scene = new THREE.Scene();
 
-    // grid追加
-    const grid = new THREE.GridHelper(10, 5);
-    scene.add(grid)
     // カメラを作成
     camera = new THREE.PerspectiveCamera(50, width / height, 1, 10000);
     camera.position.set(0, 0, 30);
@@ -44,6 +41,7 @@ function init() {
     loader.load('./models/NOI_base.glb', function (data) {
         const gltf = data;
         const obj = gltf.scene;
+        console.log(obj);
         obj.scale.set(2, 2, 2);
         obj.position.set(5, 0, 10);
         scene.add(obj);

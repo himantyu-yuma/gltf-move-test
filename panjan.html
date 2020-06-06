@@ -7,19 +7,30 @@
     <title>WebGLテスト</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1/new.min.css">
     <style>
-        button{
+        button {
             margin: 10px;
+        }
+
+        .over {
+            position: absolute;
+            transform: none;
+            top: 0;
+            left: 0;
         }
     </style>
 </head>
 
-<body>
+<body style="margin: 0;padding: 0;">
     <div id="webGL"></div>
-    <button onclick="changeAxis([1,0,0])">X軸</button>
-    <button onclick="changeAxis([0,1,0])">Y軸</button>
-    <button onclick="changeAxis([0,0,1])">Z軸</button>
-    <button onclick="changeSpeed(0.1)">スピードアップ</button>
-    <button onclick="changeSpeed(-0.1)">スピードダウン</button>
+    <div class="over">
+        <button onclick="changeAxis([1,0,0])">X軸</button>
+        <button onclick="changeAxis([0,1,0])">Y軸</button>
+        <button onclick="changeAxis([0,0,1])">Z軸</button>
+        <button onclick="changeSpeed(0.1)">スピードアップ</button>
+        <button onclick="changeSpeed(-0.1)">スピードダウン</button>
+
+        <button onclick="changeColor(Math.random() * 0xFFFFFF | 0)">色変更</button>
+    </div>
     <script src="js/three/build/three.min.js"></script>
     <script src="js/three/examples/js/loaders/GLTFLoader.js"></script>
     <script src="js/three/examples/js/controls/OrbitControls.js"></script>
