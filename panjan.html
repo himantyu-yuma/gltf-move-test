@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGLテスト</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1/new.min.css">
+</head>
+
+<body>
+    <div id="webGL"></div>
+    <button onclick="changeAxis([1,0,0])">X軸</button>
+    <button onclick="changeAxis([0,1,0])">Y軸</button>
+    <button onclick="changeAxis([0,0,1])">Z軸</button>
+    <button onclick="changeSpeed(0.1)">スピードアップ</button>
+    <button onclick="changeSpeed(-0.1)">スピードダウン</button>
+    <script src="js/three/build/three.min.js"></script>
+    <script src="js/three/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="js/three/examples/js/controls/OrbitControls.js"></script>
+    <script src="js/panjan.js"></script>
+</body>
+
+</html>
