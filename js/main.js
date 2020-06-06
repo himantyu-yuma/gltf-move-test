@@ -35,13 +35,13 @@ function init() {
     const loader = new THREE.GLTFLoader();
 
     let model = null;
-    loader.load('../models/panjan2.glb', function (data) {
+    loader.load('./models/panjan2.glb', function (data) {
         const gltf = data;
         const obj = gltf.scene;
         model = obj;
         scene.add(obj);
     });
-    loader.load('../models/NOI_base.glb', function (data) {
+    loader.load('./models/NOI_base.glb', function (data) {
         const gltf = data;
         const obj = gltf.scene;
         obj.scale.set(2, 2, 2);
@@ -54,7 +54,7 @@ function init() {
     let clock = new THREE.Clock();
     // 
 
-    loader.load('../models/Orga.glb', function (data) {
+    loader.load('./models/Orga.glb', function (data) {
         const gltf = data;
         const obj = gltf.scene;
         // obj.scale.set(2, 2, 2);
